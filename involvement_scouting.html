@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Your Name | Scouting and Leadership</title>
+    <meta name="description" content="Scouting and leadership involvement and responsibilities." />
+    <link rel="icon" href="assets/images/favicon.png" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+
+  <body>
+    <a class="skip_link" href="#main">Skip to content</a>
+
+    <header class="site_header" role="banner">
+      <nav class="nav" aria-label="Primary">
+        <div class="nav_left">
+          <a class="nav_brand" href="index.html">YOUR NAME</a>
+        </div>
+
+        <button class="nav_toggle" type="button" aria-expanded="false" aria-controls="nav_links" data_nav_toggle>
+          Menu
+        </button>
+
+        <div class="nav_links" id="nav_links">
+          <a class="nav_link" href="index.html#involvement">Back to involvement</a>
+          <a class="nav_link" href="projects.html">Projects</a>
+          <a class="nav_link" href="resume.html">Resume</a>
+          <a class="nav_link" href="index.html#contact">Contact</a>
+
+          <div class="nav_controls">
+            <button class="icon_button" type="button" data_theme_toggle aria-label="Toggle theme">Theme</button>
+            <button class="icon_button" type="button" data_motion_toggle aria-label="Toggle reduced motion">Motion</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main" class="site_main" role="main">
+      <section class="section page_header">
+        <div class="container" data_animate="fade_up">
+          <h1>Scouting and Leadership</h1>
+          <p class="section_lead">NOTE: Your leadership role and scope.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container two_col_grid">
+          <article class="card" data_animate="fade_up">
+            <h2 class="h3">Overview</h2>
+            <p>NOTE: One paragraph overview.</p>
+
+            <h3 class="h4">Responsibilities</h3>
+            <ul class="bullets">
+              <li>NOTE: Responsibility 1</li>
+              <li>NOTE: Responsibility 2</li>
+              <li>NOTE: Responsibility 3</li>
+            </ul>
+          </article>
+
+          <article class="card" data_animate="fade_up">
+            <h2 class="h3">Highlights</h2>
+            <div class="story_blocks">
+              <div class="story_block">
+                <h3 class="h4">Problem</h3>
+                <p>NOTE: Problem statement.</p>
+              </div>
+              <div class="story_block">
+                <h3 class="h4">Approach</h3>
+                <p>NOTE: Approach.</p>
+              </div>
+              <div class="story_block">
+                <h3 class="h4">Result</h3>
+                <p>NOTE: Result.</p>
+              </div>
+            </div>
+
+            <h3 class="h4">Tools</h3>
+            <ul class="tag_row">
+              <li class="tag">Planning</li>
+              <li class="tag">Mentoring</li>
+              <li class="tag">Logistics</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" aria-label="Media">
+        <div class="container">
+          <header class="section_header" data_animate="fade_up">
+            <h2>Media</h2>
+            <p class="section_lead">Images and context. Click to open.</p>
+          </header>
+
+          <div class="masonry" data_animate="fade_up">
+            <button
+              class="masonry_item"
+              type="button"
+              data_image_open
+              data_image_src="assets/images/scouting_01.jpg"
+              data_image_alt="NOTE: Describe the image"
+              data_image_caption="NOTE: Caption"
+            >
+              <img src="assets/images/scouting_01.jpg" alt="NOTE: Describe the image" loading="lazy" decoding="async" />
+            </button>
+          </div>
+
+          <div class="section_actions" data_animate="fade_up">
+            <a class="button secondary" href="projects.html">View related projects</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site_footer" role="contentinfo">
+      <div class="container footer_inner">
+        <p class="muted">© <span id="footer_year"></span> Your Name</p>
+        <div class="footer_right">
+          <a class="text_link" href="mailto:your_email@example.com">Email</a>
+          <a class="text_link" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="text_link" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Image viewer" data_modal="image">
+      <div class="modal_overlay" data_modal_close tabindex="-1"></div>
+      <div class="modal_panel" role="document">
+        <div class="modal_header">
+          <p class="modal_title" id="image_modal_title">Image</p>
+          <button class="icon_button" type="button" data_modal_close aria-label="Close image viewer">Close</button>
+        </div>
+        <figure class="modal_body">
+          <img id="image_modal_img" src="" alt="" />
+          <figcaption class="modal_caption" id="image_modal_caption"></figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>

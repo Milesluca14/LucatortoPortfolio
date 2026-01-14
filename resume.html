@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Your Name | Resume</title>
+    <meta name="description" content="Resume and experience summary for Your Name." />
+
+    <link rel="icon" href="assets/images/favicon.png" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+
+  <body>
+    <a class="skip_link" href="#main">Skip to content</a>
+
+    <div class="scroll_progress" aria-hidden="true">
+      <div class="scroll_progress_bar" id="scroll_progress_bar"></div>
+    </div>
+
+    <header class="site_header" role="banner">
+      <nav class="nav" aria-label="Primary">
+        <div class="nav_left">
+          <a class="nav_brand" href="index.html">YOUR NAME</a>
+        </div>
+
+        <button class="nav_toggle" type="button" aria-expanded="false" aria-controls="nav_links" data_nav_toggle>
+          Menu
+        </button>
+
+        <div class="nav_links" id="nav_links">
+          <a class="nav_link" href="projects.html">Projects</a>
+          <a class="nav_link" href="gallery.html">Gallery</a>
+          <a class="nav_link" href="index.html#involvement">Involvement</a>
+          <a class="nav_link" href="index.html#contact">Contact</a>
+
+          <div class="nav_controls">
+            <button class="icon_button" type="button" data_theme_toggle aria-label="Toggle theme">Theme</button>
+            <button class="icon_button" type="button" data_motion_toggle aria-label="Toggle reduced motion">Motion</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main" class="site_main" role="main">
+      <section class="section page_header">
+        <div class="container" data_animate="fade_up">
+          <h1>Resume</h1>
+          <p class="section_lead">
+            Embedded PDF plus a short text summary for quick scanning.
+          </p>
+
+          <!-- NOTE: Put your resume PDF at assets/resume/your_resume.pdf -->
+          <div class="resume_actions">
+            <a class="button primary" href="assets/resume/your_resume.pdf" download>Download PDF</a>
+            <a class="button ghost" href="index.html#contact">Contact</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container two_col_grid">
+          <article class="card" data_animate="fade_up">
+            <h2 class="h3">Summary</h2>
+            <!-- NOTE: Replace with your own summary -->
+            <p>
+              Mechanical engineering student focused on hands on design and build work. Experience in team based engineering environments with an emphasis on documentation, testing, and practical execution.
+            </p>
+
+            <ul class="bullets">
+              <!-- NOTE: Replace bullets -->
+              <li>Formula SAE: powertrain and systems documentation, build support</li>
+              <li>Robotics: mechanism prototyping and iteration</li>
+              <li>Leadership: mentoring, planning, and team coordination</li>
+            </ul>
+
+            <!-- Optional timeline (HTML ready; CSS and JS can enhance later) -->
+            <details class="details">
+              <summary>Experience timeline (optional)</summary>
+              <div class="timeline">
+                <!-- NOTE: Replace entries -->
+                <div class="timeline_item">
+                  <div class="timeline_time">20XX to Present</div>
+                  <div class="timeline_content">
+                    <strong>Role Title</strong>
+                    <p class="muted">One line description of what you did.</p>
+                  </div>
+                </div>
+
+                <div class="timeline_item">
+                  <div class="timeline_time">20XX</div>
+                  <div class="timeline_content">
+                    <strong>Role Title</strong>
+                    <p class="muted">One line description of what you did.</p>
+                  </div>
+                </div>
+              </div>
+            </details>
+          </article>
+
+          <article class="card" data_animate="fade_up">
+            <h2 class="h3">Embedded PDF</h2>
+
+            <div class="pdf_embed">
+              <!-- NOTE: If embed is annoying on mobile, users can still download -->
+              <object data="assets/resume/your_resume.pdf" type="application/pdf" width="100%" height="700">
+                <p class="muted">
+                  PDF preview not available in this browser.
+                  <a class="text_link" href="assets/resume/your_resume.pdf">Open the PDF</a>.
+                </p>
+              </object>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site_footer" role="contentinfo">
+      <div class="container footer_inner">
+        <p class="muted">© <span id="footer_year"></span> Your Name</p>
+        <div class="footer_right">
+          <a class="text_link" href="mailto:your_email@example.com">Email</a>
+          <a class="text_link" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="text_link" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>

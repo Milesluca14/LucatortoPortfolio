@@ -1,0 +1,627 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- NOTE: Change this title to your name -->
+    <title>Your Name | Mechanical Engineering Portfolio</title>
+
+    <meta name="description" content="Engineering portfolio of Your Name, a mechanical engineering student at the University of Connecticut." />
+
+    <!-- Open Graph (optional but recommended) -->
+    <meta property="og:title" content="Your Name | Engineering Portfolio" />
+    <meta property="og:description" content="Hands on mechanical engineering work, projects, and involvement." />
+    <!-- NOTE: Put a preview image in /assets/images/og_preview.jpg and update if you want -->
+    <meta property="og:image" content="assets/images/og_preview.jpg" />
+    <meta property="og:type" content="website" />
+
+    <link rel="icon" href="assets/images/favicon.png" />
+
+    <!-- Shared CSS -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+
+  <body>
+    <!-- Skip link for keyboard users -->
+    <a class="skip_link" href="#main">Skip to content</a>
+
+    <!-- Top progress indicator (JS will update width) -->
+    <div class="scroll_progress" aria-hidden="true">
+      <div class="scroll_progress_bar" id="scroll_progress_bar"></div>
+    </div>
+
+    <!-- Fixed top navigation -->
+    <header class="site_header" role="banner">
+      <nav class="nav" aria-label="Primary">
+        <div class="nav_left">
+          <!-- NOTE: Update name or use initials -->
+          <a class="nav_brand" href="index.html">YOUR NAME</a>
+        </div>
+
+        <button class="nav_toggle" type="button" aria-expanded="false" aria-controls="nav_links" data_nav_toggle>
+          Menu
+        </button>
+
+        <div class="nav_links" id="nav_links">
+          <!-- Home anchors -->
+          <a class="nav_link" href="#about" data_scrollspy>About</a>
+          <a class="nav_link" href="#skills" data_scrollspy>Skills</a>
+          <a class="nav_link" href="#involvement" data_scrollspy>Involvement</a>
+          <a class="nav_link" href="#featured_projects" data_scrollspy>Projects</a>
+          <a class="nav_link" href="#gallery_preview" data_scrollspy>Gallery</a>
+
+          <!-- Pages -->
+          <a class="nav_link" href="projects.html">All Projects</a>
+          <a class="nav_link" href="resume.html">Resume</a>
+          <a class="nav_link" href="#contact">Contact</a>
+
+          <div class="nav_controls">
+            <!-- Theme toggle -->
+            <button class="icon_button" type="button" data_theme_toggle aria-label="Toggle theme">
+              Theme
+            </button>
+
+            <!-- Reduced motion toggle (optional override of system preference) -->
+            <button class="icon_button" type="button" data_motion_toggle aria-label="Toggle reduced motion">
+              Motion
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main" class="site_main" role="main">
+      <!-- HERO -->
+      <section class="section hero" aria-label="Hero">
+        <div class="container hero_inner">
+          <div class="hero_text" data_animate="fade_up">
+            <!-- NOTE: Put your name here -->
+            <h1 class="hero_title">Your Name</h1>
+
+            <!-- NOTE: Put your short role line here -->
+            <p class="hero_subtitle">
+              Mechanical Engineering student at the University of Connecticut
+            </p>
+
+            <!-- NOTE: Put a grounded one sentence summary here -->
+            <p class="hero_support">
+              Hands on builder focused on design, manufacturing, and systems thinking through Formula SAE, robotics, and leadership.
+            </p>
+
+            <div class="hero_actions">
+              <a class="button primary" href="#featured_projects">View Projects</a>
+              <!-- NOTE: Put your resume PDF in /assets/resume/your_resume.pdf -->
+              <a class="button secondary" href="resume.html">Resume</a>
+              <a class="button ghost" href="#contact">Contact</a>
+            </div>
+
+            <!-- Optional quick chips (keep factual, not hype) -->
+            <ul class="hero_chips" aria-label="Key focus areas">
+              <!-- NOTE: Edit or remove these -->
+              <li class="chip">CAD</li>
+              <li class="chip">Manufacturing</li>
+              <li class="chip">Testing</li>
+              <li class="chip">Team leadership</li>
+            </ul>
+          </div>
+
+          <div class="hero_visual" aria-hidden="true" data_animate="fade_in">
+            <!-- NOTE: Replace hero_visual.jpg with your image (CAD render, clean photo, schematic style graphic) -->
+            <img
+              src="assets/images/hero_visual.jpg"
+              alt=""
+              loading="eager"
+              decoding="async"
+            />
+          </div>
+        </div>
+
+        <!-- Subtle separator / background pattern is handled in CSS -->
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="section" aria-label="About">
+        <div class="container">
+          <header class="section_header" data_animate="fade_up">
+            <h2>About</h2>
+            <p class="section_lead">
+              Mechanical engineering background with an emphasis on learning by doing, iterative design, and building systems that work under real constraints.
+            </p>
+            <!-- NOTE: Replace with your own paragraph -->
+          </header>
+
+          <div class="about_grid">
+            <div class="about_text" data_animate="fade_up">
+              <!-- NOTE: Replace this paragraph with your own -->
+              <p>
+                I focus on hands on engineering work where I can take a problem, model ideas quickly, build prototypes, and iterate based on testing. I enjoy collaborative environments that reward clear documentation, design tradeoffs, and practical execution.
+              </p>
+            </div>
+
+            <!-- Metrics row -->
+            <div class="metrics" aria-label="Portfolio metrics" data_animate="fade_up">
+              <!-- NOTE: Edit the labels and numbers to match your real stats -->
+              <div class="metric_card">
+                <div class="metric_value" data_countup data_target="12">0</div>
+                <div class="metric_label">Projects completed</div>
+              </div>
+
+              <div class="metric_card">
+                <div class="metric_value" data_countup data_target="350">0</div>
+                <div class="metric_label">CAD hours</div>
+              </div>
+
+              <div class="metric_card">
+                <div class="metric_value" data_countup data_target="200">0</div>
+                <div class="metric_label">Volunteer hours</div>
+              </div>
+
+              <div class="metric_card">
+                <div class="metric_value" data_countup data_target="5000">0</div>
+                <div class="metric_label">Funds raised</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS + EDUCATION -->
+      <section id="skills" class="section" aria-label="Skills and education">
+        <div class="container">
+          <header class="section_header" data_animate="fade_up">
+            <h2>Skills and Education</h2>
+            <p class="section_lead">
+              A concise overview of tools and capabilities used across projects and team work.
+            </p>
+          </header>
+
+          <div class="two_col_grid">
+            <!-- Skills -->
+            <article class="card" data_animate="fade_up">
+              <h3>Technical Skills</h3>
+
+              <div class="skill_groups">
+                <section class="skill_group" aria-label="CAD and design">
+                  <h4>CAD and design</h4>
+                  <ul>
+                    <!-- NOTE: Replace these with your actual tools -->
+                    <li>SolidWorks</li>
+                    <li>Fusion 360</li>
+                    <li>GD and T fundamentals</li>
+                    <li>Design reviews and iteration</li>
+                  </ul>
+                </section>
+
+                <section class="skill_group" aria-label="Manufacturing and prototyping">
+                  <h4>Manufacturing and prototyping</h4>
+                  <ul>
+                    <li>3D printing</li>
+                    <li>Basic machining</li>
+                    <li>Assembly and fit up</li>
+                    <li>Rapid prototyping</li>
+                  </ul>
+                </section>
+
+                <section class="skill_group" aria-label="Analysis and testing">
+                  <h4>Analysis and testing</h4>
+                  <ul>
+                    <li>FEA basics</li>
+                    <li>Test planning</li>
+                    <li>Measurement and validation</li>
+                    <li>Data interpretation</li>
+                  </ul>
+                </section>
+
+                <section class="skill_group" aria-label="Programming and tools">
+                  <h4>Programming and tools</h4>
+                  <ul>
+                    <li>MATLAB</li>
+                    <li>Python</li>
+                    <li>Git and documentation</li>
+                    <li>Spreadsheets and reports</li>
+                  </ul>
+                </section>
+              </div>
+            </article>
+
+            <!-- Education -->
+            <article class="card" data_animate="fade_up">
+              <h3>Education</h3>
+              <p class="education_main">
+                <strong>University of Connecticut</strong><br />
+                B.S. Mechanical Engineering<br />
+                <!-- NOTE: Update expected graduation -->
+                Expected graduation: 20XX
+              </p>
+
+              <details class="details">
+                <summary>Relevant coursework (optional)</summary>
+                <ul>
+                  <!-- NOTE: Replace with your real coursework -->
+                  <li>Statics and Dynamics</li>
+                  <li>Mechanics of Materials</li>
+                  <li>Thermodynamics</li>
+                  <li>Machine Design</li>
+                </ul>
+              </details>
+
+              <div class="card_footer_hint">
+                <!-- NOTE: Optional line -->
+                <p class="muted">Links to projects and involvement below show applied work.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- INVOLVEMENT -->
+      <section id="involvement" class="section" aria-label="Involvement">
+        <div class="container">
+          <header class="section_header" data_animate="fade_up">
+            <h2>Involvement</h2>
+            <p class="section_lead">
+              Hands on teams and leadership roles that shaped how I work and what I build.
+            </p>
+          </header>
+
+          <div class="card_grid three">
+            <!-- Formula SAE -->
+            <article class="card involvement_card" data_animate="fade_up">
+              <h3>Formula SAE</h3>
+              <!-- NOTE: Replace summary -->
+              <p class="muted">
+                Powertrain and systems focused work with an emphasis on documentation, iteration, and practical execution.
+              </p>
+              <ul class="bullets">
+                <!-- NOTE: Replace bullets -->
+                <li>Designed and documented components and procedures</li>
+                <li>Supported testing and build integration</li>
+                <li>Contributed to team knowledge base and reviews</li>
+              </ul>
+              <a class="text_link" href="involvement_formula_sae.html">View Formula SAE</a>
+            </article>
+
+            <!-- Robotics -->
+            <article class="card involvement_card" data_animate="fade_up">
+              <h3>Robotics</h3>
+              <p class="muted">
+                Mechanical design and build work with iterative testing and integration with controls and electronics.
+              </p>
+              <ul class="bullets">
+                <li>Prototyped mechanisms and assemblies</li>
+                <li>Refined designs based on constraints and testing</li>
+                <li>Supported integration and troubleshooting</li>
+              </ul>
+              <a class="text_link" href="involvement_robotics.html">View Robotics</a>
+            </article>
+
+            <!-- Scouting / Leadership -->
+            <article class="card involvement_card" data_animate="fade_up">
+              <h3>Scouting and Leadership</h3>
+              <p class="muted">
+                Long term leadership and mentoring experience with planning, logistics, and community impact.
+              </p>
+              <ul class="bullets">
+                <li>Led teams and coordinated activities</li>
+                <li>Mentored younger members and peers</li>
+                <li>Built reliable processes and culture</li>
+              </ul>
+              <a class="text_link" href="involvement_scouting.html">View Scouting and Leadership</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURED PROJECTS -->
+      <section id="featured_projects" class="section" aria-label="Featured projects">
+        <div class="container">
+          <header class="section_header" data_animate="fade_up">
+            <h2>Featured Projects</h2>
+            <p class="section_lead">
+              Selected work presented in a problem, approach, result format.
+            </p>
+          </header>
+
+          <div class="card_grid three" data_projects_container>
+            <!--
+              NOTE: These are placeholder cards.
+              Later, JS can render these from a JSON file if you want.
+              For now, you can duplicate and edit the HTML manually.
+            -->
+
+            <article class="card project_card" data_animate="fade_up" data_project_card>
+              <div class="project_card_top">
+                <h3 class="project_title">Project Title 1</h3>
+                <p class="muted">One sentence description of what it is and why it matters.</p>
+              </div>
+
+              <ul class="tag_row" aria-label="Project tags">
+                <!-- NOTE: Replace tags -->
+                <li class="tag">CAD</li>
+                <li class="tag">Manufacturing</li>
+                <li class="tag">Testing</li>
+              </ul>
+
+              <!-- Quick reveal area -->
+              <div class="project_reveal" aria-hidden="true">
+                <p><strong>Problem:</strong> Short problem statement.</p>
+                <p><strong>Approach:</strong> Short approach statement.</p>
+                <p><strong>Result:</strong> Short result statement, include metrics if real.</p>
+              </div>
+
+              <div class="project_actions">
+                <!-- NOTE: Link to a project detail page you create later -->
+                <a class="button small secondary" href="projects.html">Details</a>
+
+                <!-- Opens modal quick view -->
+                <button class="button small ghost" type="button" data_project_quickview>
+                  Quick view
+                </button>
+              </div>
+
+              <!-- Hidden data for quick view modal (JS reads these) -->
+              <div class="project_hidden" hidden>
+                <!-- NOTE: Replace these fields with your real content -->
+                <p data_qv_title>Project Title 1</p>
+                <p data_qv_description>Short description of project. Context, role, constraints.</p>
+                <p data_qv_problem>Problem statement here.</p>
+                <p data_qv_approach>Approach steps here.</p>
+                <p data_qv_result>Result here.</p>
+                <!-- NOTE: Put an image filename you will add to assets/images -->
+                <p data_qv_image>assets/images/project_1.jpg</p>
+              </div>
+            </article>
+
+            <article class="card project_card" data_animate="fade_up" data_project_card>
+              <div class="project_card_top">
+                <h3 class="project_title">Project Title 2</h3>
+                <p class="muted">One sentence description of what it is and why it matters.</p>
+              </div>
+              <ul class="tag_row" aria-label="Project tags">
+                <li class="tag">Analysis</li>
+                <li class="tag">CAD</li>
+                <li class="tag">Documentation</li>
+              </ul>
+              <div class="project_reveal" aria-hidden="true">
+                <p><strong>Problem:</strong> Short problem statement.</p>
+                <p><strong>Approach:</strong> Short approach statement.</p>
+                <p><strong>Result:</strong> Short result statement.</p>
+              </div>
+              <div class="project_actions">
+                <a class="button small secondary" href="projects.html">Details</a>
+                <button class="button small ghost" type="button" data_project_quickview>Quick view</button>
+              </div>
+              <div class="project_hidden" hidden>
+                <p data_qv_title>Project Title 2</p>
+                <p data_qv_description>Short description of project. Context, role, constraints.</p>
+                <p data_qv_problem>Problem statement here.</p>
+                <p data_qv_approach>Approach steps here.</p>
+                <p data_qv_result>Result here.</p>
+                <p data_qv_image>assets/images/project_2.jpg</p>
+              </div>
+            </article>
+
+            <article class="card project_card" data_animate="fade_up" data_project_card>
+              <div class="project_card_top">
+                <h3 class="project_title">Project Title 3</h3>
+                <p class="muted">One sentence description of what it is and why it matters.</p>
+              </div>
+              <ul class="tag_row" aria-label="Project tags">
+                <li class="tag">Robotics</li>
+                <li class="tag">Prototyping</li>
+                <li class="tag">Integration</li>
+              </ul>
+              <div class="project_reveal" aria-hidden="true">
+                <p><strong>Problem:</strong> Short problem statement.</p>
+                <p><strong>Approach:</strong> Short approach statement.</p>
+                <p><strong>Result:</strong> Short result statement.</p>
+              </div>
+              <div class="project_actions">
+                <a class="button small secondary" href="projects.html">Details</a>
+                <button class="button small ghost" type="button" data_project_quickview>Quick view</button>
+              </div>
+              <div class="project_hidden" hidden>
+                <p data_qv_title>Project Title 3</p>
+                <p data_qv_description>Short description of project. Context, role, constraints.</p>
+                <p data_qv_problem>Problem statement here.</p>
+                <p data_qv_approach>Approach steps here.</p>
+                <p data_qv_result>Result here.</p>
+                <p data_qv_image>assets/images/project_3.jpg</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="section_actions" data_animate="fade_up">
+            <a class="button secondary" href="projects.html">View all projects</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- GALLERY PREVIEW -->
+      <section id="gallery_preview" class="section" aria-label="Gallery preview">
+        <div class="container">
+          <header class="section_header" data_animate="fade_up">
+            <h2>Gallery</h2>
+            <p class="section_lead">
+              CAD, builds, prototypes, and team work. Click any image to open.
+            </p>
+          </header>
+
+          <div class="masonry" data_animate="fade_up">
+            <!--
+              NOTE: Replace filenames with your real images in assets/images/gallery/
+              Each button opens the photo modal. JS reads data attributes.
+            -->
+
+            <button
+              class="masonry_item"
+              type="button"
+              data_image_open
+              data_image_src="assets/images/gallery/image_01.jpg"
+              data_image_alt="NOTE: Describe the image briefly for accessibility"
+              data_image_caption="NOTE: Write a short caption"
+            >
+              <img src="assets/images/gallery/image_01.jpg" alt="NOTE: Describe the image briefly for accessibility" loading="lazy" decoding="async" />
+            </button>
+
+            <button
+              class="masonry_item"
+              type="button"
+              data_image_open
+              data_image_src="assets/images/gallery/image_02.jpg"
+              data_image_alt="NOTE: Describe the image briefly for accessibility"
+              data_image_caption="NOTE: Write a short caption"
+            >
+              <img src="assets/images/gallery/image_02.jpg" alt="NOTE: Describe the image briefly for accessibility" loading="lazy" decoding="async" />
+            </button>
+
+            <button
+              class="masonry_item"
+              type="button"
+              data_image_open
+              data_image_src="assets/images/gallery/image_03.jpg"
+              data_image_alt="NOTE: Describe the image briefly for accessibility"
+              data_image_caption="NOTE: Write a short caption"
+            >
+              <img src="assets/images/gallery/image_03.jpg" alt="NOTE: Describe the image briefly for accessibility" loading="lazy" decoding="async" />
+            </button>
+
+            <button
+              class="masonry_item"
+              type="button"
+              data_image_open
+              data_image_src="assets/images/gallery/image_04.jpg"
+              data_image_alt="NOTE: Describe the image briefly for accessibility"
+              data_image_caption="NOTE: Write a short caption"
+            >
+              <img src="assets/images/gallery/image_04.jpg" alt="NOTE: Describe the image briefly for accessibility" loading="lazy" decoding="async" />
+            </button>
+          </div>
+
+          <div class="section_actions" data_animate="fade_up">
+            <a class="button secondary" href="gallery.html">View full gallery</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT (Footer anchors here) -->
+      <section id="contact" class="section contact_section" aria-label="Contact">
+        <div class="container">
+          <header class="section_header" data_animate="fade_up">
+            <h2>Contact</h2>
+            <p class="section_lead">
+              Best ways to reach me.
+            </p>
+          </header>
+
+          <div class="card_grid two" data_animate="fade_up">
+            <article class="card">
+              <h3>Email</h3>
+              <!-- NOTE: Replace with your email -->
+              <p><a class="text_link" href="mailto:your_email@example.com">your_email@example.com</a></p>
+              <p class="muted">Use email for recruiting, project questions, or collaboration.</p>
+            </article>
+
+            <article class="card">
+              <h3>Links</h3>
+              <ul class="link_list">
+                <!-- NOTE: Replace links -->
+                <li><a class="text_link" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a></li>
+                <li><a class="text_link" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a></li>
+              </ul>
+              <p class="muted">Public work, code, and professional profile.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site_footer" role="contentinfo">
+      <div class="container footer_inner">
+        <div class="footer_left">
+          <!-- NOTE: Update year/name if you want -->
+          <p class="muted">© <span id="footer_year"></span> Your Name</p>
+        </div>
+
+        <div class="footer_right">
+          <!-- NOTE: Replace -->
+          <a class="text_link" href="mailto:your_email@example.com">Email</a>
+          <a class="text_link" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="text_link" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- PHOTO MODAL (Image viewer) -->
+    <div class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Image viewer" data_modal="image">
+      <div class="modal_overlay" data_modal_close tabindex="-1"></div>
+
+      <div class="modal_panel" role="document">
+        <div class="modal_header">
+          <p class="modal_title" id="image_modal_title">Image</p>
+          <button class="icon_button" type="button" data_modal_close aria-label="Close image viewer">Close</button>
+        </div>
+
+        <figure class="modal_body">
+          <img id="image_modal_img" src="" alt="" />
+          <figcaption class="modal_caption" id="image_modal_caption"></figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <!-- PROJECT QUICK VIEW MODAL -->
+    <div class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Project quick view" data_modal="project">
+      <div class="modal_overlay" data_modal_close tabindex="-1"></div>
+
+      <div class="modal_panel" role="document">
+        <div class="modal_header">
+          <p class="modal_title" id="project_modal_title">Project</p>
+          <button class="icon_button" type="button" data_modal_close aria-label="Close project quick view">Close</button>
+        </div>
+
+        <div class="modal_body">
+          <div class="modal_project_layout">
+            <div class="modal_project_media" aria-hidden="true">
+              <img id="project_modal_img" src="" alt="" />
+            </div>
+
+            <div class="modal_project_content">
+              <p class="muted" id="project_modal_description"></p>
+
+              <div class="kv_block">
+                <h4>Problem</h4>
+                <p id="project_modal_problem"></p>
+              </div>
+
+              <div class="kv_block">
+                <h4>Approach</h4>
+                <p id="project_modal_approach"></p>
+              </div>
+
+              <div class="kv_block">
+                <h4>Result</h4>
+                <p id="project_modal_result"></p>
+              </div>
+
+              <!-- NOTE: You can later add a link to the full project page -->
+              <div class="modal_actions">
+                <a class="button small secondary" href="projects.html">Go to projects</a>
+                <button class="button small ghost" type="button" data_modal_close>Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <noscript>
+      <div class="noscript_notice">
+        This site works best with JavaScript enabled for animations, filters, and modals.
+      </div>
+    </noscript>
+
+    <!-- Shared JS -->
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>

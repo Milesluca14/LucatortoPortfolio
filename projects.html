@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Your Name | Projects</title>
+    <meta name="description" content="Engineering projects by Your Name, presented with problem, approach, and results." />
+
+    <link rel="icon" href="assets/images/favicon.png" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+
+  <body>
+    <a class="skip_link" href="#main">Skip to content</a>
+
+    <div class="scroll_progress" aria-hidden="true">
+      <div class="scroll_progress_bar" id="scroll_progress_bar"></div>
+    </div>
+
+    <header class="site_header" role="banner">
+      <nav class="nav" aria-label="Primary">
+        <div class="nav_left">
+          <a class="nav_brand" href="index.html">YOUR NAME</a>
+        </div>
+
+        <button class="nav_toggle" type="button" aria-expanded="false" aria-controls="nav_links" data_nav_toggle>
+          Menu
+        </button>
+
+        <div class="nav_links" id="nav_links">
+          <a class="nav_link" href="index.html#about">About</a>
+          <a class="nav_link" href="index.html#involvement">Involvement</a>
+          <a class="nav_link" href="gallery.html">Gallery</a>
+          <a class="nav_link" href="resume.html">Resume</a>
+          <a class="nav_link" href="index.html#contact">Contact</a>
+
+          <div class="nav_controls">
+            <button class="icon_button" type="button" data_theme_toggle aria-label="Toggle theme">Theme</button>
+            <button class="icon_button" type="button" data_motion_toggle aria-label="Toggle reduced motion">Motion</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main" class="site_main" role="main">
+      <section class="section page_header">
+        <div class="container" data_animate="fade_up">
+          <h1>Projects</h1>
+          <p class="section_lead">
+            Projects are organized to highlight the problem, the approach, and the result. Filters help you scan by skill, category, and year.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <!-- Filters -->
+          <div class="filters" data_animate="fade_up" aria-label="Project filters">
+            <div class="filter_row">
+              <label class="filter_label" for="project_search">Search</label>
+              <input
+                id="project_search"
+                class="input"
+                type="search"
+                placeholder="Search by title or keyword"
+                data_project_search
+              />
+            </div>
+
+            <div class="filter_row">
+              <label class="filter_label" for="filter_category">Category</label>
+              <select id="filter_category" class="select" data_filter_category>
+                <!-- NOTE: Edit categories as needed -->
+                <option value="all">All</option>
+                <option value="formula_sae">Formula SAE</option>
+                <option value="robotics">Robotics</option>
+                <option value="scouting">Scouting and Leadership</option>
+                <option value="personal">Personal</option>
+              </select>
+
+              <label class="filter_label" for="filter_year">Year</label>
+              <select id="filter_year" class="select" data_filter_year>
+                <!-- NOTE: Add years you want -->
+                <option value="all">All</option>
+                <option value="2026">2026</option>
+                <option value="2025">2025</option>
+                <option value="2024">2024</option>
+              </select>
+
+              <label class="filter_label" for="sort_projects">Sort</label>
+              <select id="sort_projects" class="select" data_sort_projects>
+                <option value="recent">Most recent</option>
+                <option value="impact">Most impact</option>
+                <option value="technical">Most technical</option>
+              </select>
+            </div>
+
+            <!-- Skill chips (optional) -->
+            <div class="chip_row" aria-label="Skill filters" data_filter_skills>
+              <!-- NOTE: Add or remove skill chips; JS can treat these as toggles -->
+              <button class="chip chip_toggle" type="button" data_skill="cad">CAD</button>
+              <button class="chip chip_toggle" type="button" data_skill="manufacturing">Manufacturing</button>
+              <button class="chip chip_toggle" type="button" data_skill="analysis">Analysis</button>
+              <button class="chip chip_toggle" type="button" data_skill="testing">Testing</button>
+              <button class="chip chip_toggle" type="button" data_skill="leadership">Leadership</button>
+            </div>
+          </div>
+
+          <!-- Projects grid -->
+          <div class="card_grid three" data_projects_grid data_animate="fade_up">
+            <!--
+              NOTE: JS will either render cards here from a data file,
+              or you can manually add cards like on index.html.
+              Start with manual cards if you prefer.
+            -->
+
+            <article class="card project_card" data_project_card>
+              <div class="project_card_top">
+                <h2 class="project_title h3">Project Title</h2>
+                <p class="muted">Short project summary. One sentence.</p>
+              </div>
+
+              <ul class="tag_row">
+                <li class="tag">CAD</li>
+                <li class="tag">Testing</li>
+              </ul>
+
+              <div class="project_actions">
+                <!-- NOTE: Link to a project detail page you create later -->
+                <a class="button small secondary" href="#">Project page</a>
+
+                <button class="button small ghost" type="button" data_project_quickview>
+                  Quick view
+                </button>
+              </div>
+
+              <div class="project_hidden" hidden>
+                <p data_qv_title>Project Title</p>
+                <p data_qv_description>Context, role, constraints.</p>
+                <p data_qv_problem>Problem statement.</p>
+                <p data_qv_approach>Approach.</p>
+                <p data_qv_result>Result.</p>
+                <p data_qv_image>assets/images/project_placeholder.jpg</p>
+              </div>
+            </article>
+          </div>
+
+          <p class="muted" data_projects_empty hidden>
+            No projects match the current filters.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site_footer" role="contentinfo">
+      <div class="container footer_inner">
+        <p class="muted">© <span id="footer_year"></span> Your Name</p>
+        <div class="footer_right">
+          <a class="text_link" href="mailto:your_email@example.com">Email</a>
+          <a class="text_link" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="text_link" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Reuse the same modals -->
+    <div class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Project quick view" data_modal="project">
+      <div class="modal_overlay" data_modal_close tabindex="-1"></div>
+      <div class="modal_panel" role="document">
+        <div class="modal_header">
+          <p class="modal_title" id="project_modal_title">Project</p>
+          <button class="icon_button" type="button" data_modal_close aria-label="Close project quick view">Close</button>
+        </div>
+
+        <div class="modal_body">
+          <div class="modal_project_layout">
+            <div class="modal_project_media" aria-hidden="true">
+              <img id="project_modal_img" src="" alt="" />
+            </div>
+
+            <div class="modal_project_content">
+              <p class="muted" id="project_modal_description"></p>
+
+              <div class="kv_block">
+                <h3 class="h4">Problem</h3>
+                <p id="project_modal_problem"></p>
+              </div>
+
+              <div class="kv_block">
+                <h3 class="h4">Approach</h3>
+                <p id="project_modal_approach"></p>
+              </div>
+
+              <div class="kv_block">
+                <h3 class="h4">Result</h3>
+                <p id="project_modal_result"></p>
+              </div>
+
+              <div class="modal_actions">
+                <button class="button small ghost" type="button" data_modal_close>Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>
